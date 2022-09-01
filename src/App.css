@@ -6,3 +6,8 @@
 .cont-logo{
   width: 20%;
 }
+
+.cont-saludo h2{
+  text-align: center;
+  padding-top: 1vw;
+}
