@@ -10,6 +10,10 @@ function App() {
       <NavBar/>
       <ItemListContainer nombre="Jeremias"/>
       <ItemCount stock={5} nombreProducto="Lavarropa"/>
+      <ItemCount stock={3} nombreProducto="Microonda"/>
+      <ItemCount stock={8} nombreProducto="Tostadora"/>
+      <ItemCount stock={1} nombreProducto="Plancha"/>
+      <ItemCount stock={4} nombreProducto="Maquina afeitadora"/>
     </div>
   );
 }
