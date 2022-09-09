@@ -1,0 +1,27 @@
+[
+    {
+        "producto":"Heladera",
+        "precio": 80000,
+        "id":0       
+    },
+    {
+        "producto":"Microondas",
+        "precio": 42000,
+        "id":1
+    },
+    {
+        "producto":"Iphone 12",
+        "precio": 50000,
+        "id":2
+    },
+    {
+        "producto":"Notebook",
+        "precio": 150000,
+        "id":3
+    },
+    {
+        "producto":"Bicicleta",
+        "precio": 20000,
+        "id":4
+    }
+]
