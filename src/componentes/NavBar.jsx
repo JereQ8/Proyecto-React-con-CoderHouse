@@ -1,5 +1,6 @@
 import React from 'react'
 import CartWidget from './CartWidget'
+import { NavLink } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -18,25 +19,19 @@ const logo= 'https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/54
           <div className="collapse navbar-collapse" id="navbarScroll">
             <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="index.html">Home</a> 
+                <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink> 
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="index.html">Link</a>
-              </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Link
-                </a>
-                <ul className="dropdown-menu">
-                  <li><a className="dropdown-item" href="index.html">Action</a></li>
-                  <li><a className="dropdown-item" href="index.html">Another action</a></li>
-                  <li><hr className="dropdown-divider"/></li>
-                  <li><a className="dropdown-item" href="index.html">Something else here</a></li>
-                </ul>
+                <NavLink className="nav-link" to="/productosStock">Productos Stock</NavLink>
               </li>
               <li className="nav-item">
-                <a Name="nav-link disabled" href='index.html'>Link</a>
+                <NavLink className="nav-link" to="/productosConDetalles">Pruductos con Detalles</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/ListaProductos">Pruductos</NavLink>
+              </li>
+              
+              
             </ul>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
