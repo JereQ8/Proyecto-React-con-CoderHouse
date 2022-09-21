@@ -20,6 +20,7 @@ function ItemDetailContainer() {
                         precio: 80000,
                         color:"Blanca o Gris",
                         cuotas:"Hasta 12 cuotas sin interes",
+                        stock:4,
                         id:0       
                     },
                     {
@@ -27,12 +28,14 @@ function ItemDetailContainer() {
                         precio: 42000,
                         color:"Blanco o Gris",
                         cuotas:"Hasta 12 cuotas sin interes",
+                        stock:6,
                         id:1
                     },
                     {
                         producto:"Iphone 12",
                         precio: 50000,
                         color:"Blanco, Gris, Gris oscuro, Negro y Dorado",
+                        stock:2,
                         cuotas:"Hasta 6 cuotas sin interes",
                         id:2
                     },
@@ -41,6 +44,7 @@ function ItemDetailContainer() {
                         precio: 150000,
                         color:"Blanca, Plateada o Negra",
                         cuotas:"Hasta 12 cuotas sin interes",
+                        stock:5,
                         id:3
                     },
                     {
@@ -48,10 +52,11 @@ function ItemDetailContainer() {
                         precio: 20000,
                         color:"Roja, amarilla, azul, verde",
                         cuotas:"Hasta 6 cuotas sin interes",
+                        stock:3,
                         id:4
                     }
                 ])
-            },3000)
+            },1000)
            
         })
 
@@ -65,7 +70,7 @@ function ItemDetailContainer() {
     return (
         <div className='cont-item-detail'>
             { contenido ? data.map((producto)=>{
-                return <ItemDetail nombre={producto.producto} colores={producto.color} cuotas={producto.cuotas} precio={producto.precio} key={producto.id}/>
+                return <ItemDetail nombre={producto.producto} colores={producto.color} cuotas={producto.cuotas} precio={producto.precio} stock={producto.stock} key={producto.id}/>
             }) : "Cargando..."}
         </div>
     )

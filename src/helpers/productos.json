@@ -4,6 +4,7 @@
         "precio": 80000,
         "color":"Blanca o Gris",
         "cuotas":"Hasta 12 cuotas sin interes",
+        "stock":6,
         "id":0       
     },
     {
@@ -11,12 +12,14 @@
         "precio": 42000,
         "color":"Blanco o Gris",
         "cuotas":"Hasta 12 cuotas sin interes",
+        "stock":3,
         "id":1
     },
     {
         "producto":"Iphone 12",
         "precio": 50000,
         "color":"Blanco, Gris, Gris oscuro, Negro y Dorado",
+        "stock":8,
         "cuotas":"Hasta 6 cuotas sin interes",
         "id":2
     },
@@ -25,6 +28,7 @@
         "precio": 150000,
         "color":"Blanca, Plateada o Negra",
         "cuotas":"Hasta 12 cuotas sin interes",
+        "stock":2,
         "id":3
     },
     {
@@ -32,6 +36,7 @@
         "precio": 20000,
         "color":"Roja, amarilla, azul, verde",
         "cuotas":"Hasta 6 cuotas sin interes",
+        "stock":1,
         "id":4
     }
 ]

@@ -30,6 +30,9 @@ const logo= 'https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/54
               <li className="nav-item">
                 <NavLink className="nav-link" to="/ListaProductos">Pruductos</NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/cart">Carrito</NavLink>
+              </li>
               
               
             </ul>
