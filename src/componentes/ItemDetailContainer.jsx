@@ -21,7 +21,7 @@ function ItemDetailContainer() {
                         color:"Blanca o Gris",
                         cuotas:"Hasta 12 cuotas sin interes",
                         stock:4,
-                        id:0       
+                        id:"p0"       
                     },
                     {
                         producto:"Microondas",
@@ -29,7 +29,7 @@ function ItemDetailContainer() {
                         color:"Blanco o Gris",
                         cuotas:"Hasta 12 cuotas sin interes",
                         stock:6,
-                        id:1
+                        id:"p1"
                     },
                     {
                         producto:"Iphone 12",
@@ -37,7 +37,7 @@ function ItemDetailContainer() {
                         color:"Blanco, Gris, Gris oscuro, Negro y Dorado",
                         stock:2,
                         cuotas:"Hasta 6 cuotas sin interes",
-                        id:2
+                        id:"p2"
                     },
                     {
                         producto:"Notebook",
@@ -45,7 +45,7 @@ function ItemDetailContainer() {
                         color:"Blanca, Plateada o Negra",
                         cuotas:"Hasta 12 cuotas sin interes",
                         stock:5,
-                        id:3
+                        id:"p3"
                     },
                     {
                         producto:"Bicicleta",
@@ -53,7 +53,7 @@ function ItemDetailContainer() {
                         color:"Roja, amarilla, azul, verde",
                         cuotas:"Hasta 6 cuotas sin interes",
                         stock:3,
-                        id:4
+                        id:"p4"
                     }
                 ])
             },1000)
@@ -70,7 +70,7 @@ function ItemDetailContainer() {
     return (
         <div className='cont-item-detail'>
             { contenido ? data.map((producto)=>{
-                return <ItemDetail nombre={producto.producto} colores={producto.color} cuotas={producto.cuotas} precio={producto.precio} stock={producto.stock} key={producto.id}/>
+                return <ItemDetail nombre={producto.producto} colores={producto.color} cuotas={producto.cuotas} precio={producto.precio} stock={producto.stock} key={producto.id} id={producto.id} />
             }) : "Cargando..."}
         </div>
     )
