@@ -12,7 +12,7 @@ const logo= 'https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/54
       <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand cont-logo" href="index.html"><img className='logoNetflix' src={logo} alt="Logo"/></a>
-          <a href='index.html'> <CartWidget/> </a>
+          <a href='index.html'>  </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -33,6 +33,7 @@ const logo= 'https://images.ctfassets.net/4cd45et68cgf/7LrExJ6PAj6MSIPkDyCO86/54
               <li className="nav-item">
                 <NavLink className="nav-link" to="/cart">Carrito</NavLink>
               </li>
+              <CartWidget/>
               
               
             </ul>
