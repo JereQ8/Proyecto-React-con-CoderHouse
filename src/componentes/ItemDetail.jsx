@@ -43,7 +43,6 @@ function ItemDetail({ nombre, colores, precio, cuotas, stock, id }) {
       setComprar(true)
       e.nativeEvent.path[1].innerHTML="";
       agregarProductoAlCarrito(productoComprado);
-      console.log(productosComprados)
       
       
       

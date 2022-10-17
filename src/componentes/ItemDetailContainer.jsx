@@ -19,7 +19,6 @@ function ItemDetailContainer() {
         const queryCollection= collection(querydb, "products");
         getDocs(queryCollection)
             .then(datos=>{
-                console.log(datos.docs.map(producto=>console.log(producto.data(), producto.id)));
                 setData(datos.docs)
                 setContenido(true)
             } )
