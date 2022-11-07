@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { useContext, useState } from 'react'
 import CartContext from '../context/CartContext'
-
+import {collection, addDoc, getFirestore} from "firebase/firestore"
 
 
 
@@ -13,7 +13,7 @@ function Cart() {
     pintarValorTotal()
   })
 
-  const { productosComprados, setProductosComprados } = useContext(CartContext)
+  const { productosComprados, setProductosComprados, totalPrice } = useContext(CartContext)
   const [valorTotal, setValorTotal] = useState(0)
   // Cada vez que el array "productosComprados" cambie se pinta de nuevo el carrito
 
@@ -31,6 +31,13 @@ function Cart() {
     pintarValorTotal()
   }
 
+  const order={
+    buyer:"Jeremias Quinteros",
+    adress:"Pipi Cucu 777",
+    items:productosComprados.map(producto=>({id:producto.id, name:producto.nombre, quantity:producto.cantidad, price:producto.precio})) ,
+    totalPrice: totalPrice()
+  }
+
   const pintarValorTotal = () => {
     let acumulador = 0;
     for (let i = 0; i < productosComprados.length; i++) {
@@ -40,7 +47,13 @@ function Cart() {
     setValorTotal(acumulador)
   }
 
-
+  const realizarOrden= () =>{
+    const db= getFirestore();
+    const collectionOrder= collection(db, "orders");
+    addDoc(collectionOrder, order)
+    .then(({id})=>console.log(id))
+    console.log(order)
+  }
 
 
 
@@ -73,7 +86,7 @@ function Cart() {
         </div>
       </div>
       <div>
-
+          {productosComprados.length === 0 ? "" : <button onClick={realizarOrden}> Generar orden de compra </button> }
 
       </div>
     </div>

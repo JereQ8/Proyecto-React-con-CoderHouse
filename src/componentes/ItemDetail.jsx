@@ -25,11 +25,12 @@ function ItemDetail({ nombre, colores, precio, cuotas, stock, id }) {
   function agregarProductoAlCarrito(producto){
     let productoAgregado=[...productosComprados, producto];
     setProductosComprados(productoAgregado);
+    console.log(productoAgregado)
   };
 
   const sumarAlCarrito= (e)=>{
 
-    if(e.nativeEvent.path[2].querySelector("div").querySelector("div").querySelector("div").textContent== 0){
+    if(e.nativeEvent.path[2].querySelector("div").querySelector("div").querySelector("div").textContent=== 0){
       alert("Para comprar debe marcar la cantidad de productos que desea")
     }
     else{
@@ -43,7 +44,7 @@ function ItemDetail({ nombre, colores, precio, cuotas, stock, id }) {
       setComprar(true)
       e.nativeEvent.path[1].innerHTML="";
       agregarProductoAlCarrito(productoComprado);
-      
+      console.log(productoComprado)
       
       
     }
